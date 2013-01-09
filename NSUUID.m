@@ -4,6 +4,14 @@
 //  Copyright (c) 2013 Cédric Luthi. All rights reserved.
 //
 
+#import <Availability.h>
+
+#if defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && __IPHONE_OS_VERSION_MIN_REQUIRED >= __IPHONE_6_0
+#error Do not compile this file if you are targeting iOS 6.0 or later
+#elif defined(__MAC_OS_X_VERSION_MIN_REQUIRED) && __MAC_OS_X_VERSION_MIN_REQUIRED >= __MAC_10_8
+#error Do not compile this file if you are targeting OS X 10.8 or later
+#endif
+
 #import <Foundation/Foundation.h>
 #import <objc/runtime.h>
 #import <uuid/uuid.h>
