@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C201306F1697461200FAE84F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20BB120168067C7006D5142 /* Foundation.framework */; };
+		C201309D1697475200FAE84F /* NSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = C201309C1697475200FAE84F /* NSUUID.m */; settings = {COMPILER_FLAGS = "-Weverything"; }; };
+		C20130F11697495C00FAE84F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20130EF1697495C00FAE84F /* SenTestingKit.framework */; };
+		C20130F31697499600FAE84F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C20130EF1697495C00FAE84F /* SenTestingKit.framework */; };
+		C20130F41697856B00FAE84F /* NSUUID.m in Sources */ = {isa = PBXBuildFile; fileRef = C201309C1697475200FAE84F /* NSUUID.m */; settings = {COMPILER_FLAGS = "-Weverything"; }; };
+		C256D57D1698E00D004B2D72 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C256D57C1698E00D004B2D72 /* Tests.m */; };
+		C256D57E1698E00D004B2D72 /* Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = C256D57C1698E00D004B2D72 /* Tests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C2013051169745E800FAE84F /* OS X Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OS X Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C201306C1697461100FAE84F /* iOS Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C201309C1697475200FAE84F /* NSUUID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSUUID.m; sourceTree = "<group>"; };
+		C20130EF1697495C00FAE84F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		C20BB120168067C7006D5142 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C256D57C1698E00D004B2D72 /* Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C201304D169745E800FAE84F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20130F31697499600FAE84F /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20130681697461100FAE84F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C201306F1697461200FAE84F /* Foundation.framework in Frameworks */,
+				C20130F11697495C00FAE84F /* SenTestingKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C20BB111168067C7006D5142 = {
+			isa = PBXGroup;
+			children = (
+				C201309C1697475200FAE84F /* NSUUID.m */,
+				C256D57C1698E00D004B2D72 /* Tests.m */,
+				C20BB11F168067C7006D5142 /* Frameworks */,
+				C20BB11D168067C7006D5142 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C20BB11D168067C7006D5142 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C2013051169745E800FAE84F /* OS X Tests.octest */,
+				C201306C1697461100FAE84F /* iOS Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C20BB11F168067C7006D5142 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C20BB120168067C7006D5142 /* Foundation.framework */,
+				C20130EF1697495C00FAE84F /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C2013050169745E800FAE84F /* OS X Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2013064169745E800FAE84F /* Build configuration list for PBXNativeTarget "OS X Tests" */;
+			buildPhases = (
+				C201304C169745E800FAE84F /* Sources */,
+				C201304D169745E800FAE84F /* Frameworks */,
+				C201304F169745E800FAE84F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "OS X Tests";
+			productName = "OS X Tests";
+			productReference = C2013051169745E800FAE84F /* OS X Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		C201306B1697461100FAE84F /* iOS Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C201307A1697461200FAE84F /* Build configuration list for PBXNativeTarget "iOS Tests" */;
+			buildPhases = (
+				C20130671697461100FAE84F /* Sources */,
+				C20130681697461100FAE84F /* Frameworks */,
+				C201306A1697461100FAE84F /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS Tests";
+			productName = "iOS Tests";
+			productReference = C201306C1697461100FAE84F /* iOS Tests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C20BB113168067C7006D5142 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Cédric Luthi";
+			};
+			buildConfigurationList = C20BB116168067C7006D5142 /* Build configuration list for PBXProject "NSUUID" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = C20BB111168067C7006D5142;
+			productRefGroup = C20BB11D168067C7006D5142 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C2013050169745E800FAE84F /* OS X Tests */,
+				C201306B1697461100FAE84F /* iOS Tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C201304F169745E800FAE84F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		C201306A1697461100FAE84F /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C201304C169745E800FAE84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C201309D1697475200FAE84F /* NSUUID.m in Sources */,
+				C256D57D1698E00D004B2D72 /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C20130671697461100FAE84F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C20130F41697856B00FAE84F /* NSUUID.m in Sources */,
+				C256D57E1698E00D004B2D72 /* Tests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C2013065169745E800FAE84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C2013066169745E800FAE84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		C201307B1697461200FAE84F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		C201307C1697461200FAE84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		C20BB129168067C7006D5142 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		C20BB12A168067C7006D5142 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C2013064169745E800FAE84F /* Build configuration list for PBXNativeTarget "OS X Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2013065169745E800FAE84F /* Debug */,
+				C2013066169745E800FAE84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C201307A1697461200FAE84F /* Build configuration list for PBXNativeTarget "iOS Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C201307B1697461200FAE84F /* Debug */,
+				C201307C1697461200FAE84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C20BB116168067C7006D5142 /* Build configuration list for PBXProject "NSUUID" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C20BB129168067C7006D5142 /* Debug */,
+				C20BB12A168067C7006D5142 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C20BB113168067C7006D5142 /* Project object */;
+}
