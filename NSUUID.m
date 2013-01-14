@@ -16,6 +16,8 @@
 #import <objc/runtime.h>
 #import <uuid/uuid.h>
 
+#pragma clang diagnostic ignored "-Wobjc-interface-ivars"
+
 @interface XCDUUID : NSObject <NSCopying, NSSecureCoding>
 {
 	uuid_t _uuid;
