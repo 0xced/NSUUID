@@ -17,6 +17,7 @@
 #import <uuid/uuid.h>
 
 #pragma clang diagnostic ignored "-Wobjc-interface-ivars"
+#pragma clang diagnostic ignored "-Wdirect-ivar-access"
 
 @interface XCDUUID : NSObject <NSCopying, NSSecureCoding>
 {
