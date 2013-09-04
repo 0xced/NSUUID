@@ -94,4 +94,9 @@
 	STAssertEqualObjects(uuidA, uuidB, @"Archived then unarchived uuid must be equal.");
 }
 
+- (void) testSecureCoding
+{
+	STAssertTrue([NSUUID supportsSecureCoding], @"The NSUUID class must support secure coding.");
+}
+
 @end
