@@ -70,6 +70,12 @@
 	STAssertEqualObjects(@"E621E1F8-C36C-495A-93FC-0C247A3E6E5F", [uuid UUIDString], @"The UUIDString must be formatted according to the UUID specification.");
 }
 
+- (void) testDescription
+{
+	NSUUID *uuid = [[[NSUUID alloc] initWithUUIDBytes:(uuid_t){0xE6,0x21,0xE1,0xF8,0xC3,0x6C,0x49,0x5A,0x93,0xFC,0x0C,0x24,0x7A,0x3E,0x6E,0x5F}] autorelease];
+	STAssertTrue([[uuid description] rangeOfString:@"E621E1F8-C36C-495A-93FC-0C247A3E6E5F"].location != NSNotFound, @"The UUID description must contain the UUID string.");
+}
+
 - (void) testEquality
 {
 	NSUUID *uuidA = [NSUUID UUID];
