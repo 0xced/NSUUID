@@ -69,8 +69,12 @@
 	NSUUID *uuidA = [NSUUID UUID];
 	NSUUID *uuidB = [NSUUID UUID];
 	
+	STAssertTrue([uuidA isEqual:uuidA], @"The UUID must be equal to itself.");
 	STAssertEqualObjects(uuidA, [[uuidA copy] autorelease], @"A copy of a UUID must be equal to the original UUID.");
+	STAssertEquals([uuidA hash], [[[uuidA copy] autorelease] hash], @"Hashes of two identical UUIDs must be equal.");
 	STAssertFalse([uuidA isEqual:uuidB], @"Two different UUIDs must not be equal.");
+	STAssertFalse([uuidA isEqual:[NSDate date]], @"A UUIDs must not be equal to an object which is not a NSUUID.");
+	STAssertFalse([uuidA isEqual:nil], @"A UUIDs must not be equal to nil.");
 }
 
 - (void) testNSCoding
