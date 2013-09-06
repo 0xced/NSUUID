@@ -31,6 +31,7 @@
 - (void) testImplementationClass
 {
 	NSUUID *uuid = [NSUUID UUID];
+	STAssertTrue([uuid isKindOfClass:[NSUUID class]], @"");
 #if TARGET_OS_IPHONE
 	if (kCFCoreFoundationVersionNumber <= kCFCoreFoundationVersionNumber_iOS_5_1)
 #else
