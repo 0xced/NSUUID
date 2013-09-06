@@ -192,7 +192,12 @@
 #endif
 	if (NSUUIDClassRef && *NSUUIDClassRef == Nil)
 	{
-		*NSUUIDClassRef = objc_duplicateClass(self, "NSUUID", 0);
+		Class NSUUIDClass = objc_allocateClassPair(self, "NSUUID", 0);
+		if (NSUUIDClass)
+		{
+			objc_registerClassPair(NSUUIDClass);
+			*NSUUIDClassRef = NSUUIDClass;
+		}
 	}
 }
 
