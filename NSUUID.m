@@ -18,6 +18,7 @@
 
 #pragma clang diagnostic ignored "-Wobjc-interface-ivars"
 #pragma clang diagnostic ignored "-Wdirect-ivar-access"
+#pragma clang diagnostic ignored "-Wundef"
 
 @interface XCDUUID : NSObject <NSCopying, NSSecureCoding>
 {
@@ -177,6 +178,11 @@
 	      "movw %0, :lower16:(L_OBJC_CLASS_NSUUID-(LPC0+4))\n"
 	      "movt %0, :upper16:(L_OBJC_CLASS_NSUUID-(LPC0+4))\n"
 	      "LPC0: add %0, pc" : "=r"(NSUUIDClassRef)
+	);
+#elif TARGET_CPU_ARM64
+	__asm(
+	      "adrp %0, L_OBJC_CLASS_NSUUID@PAGE\n"
+	      "add  %0, %0, L_OBJC_CLASS_NSUUID@PAGEOFF" : "=r"(NSUUIDClassRef)
 	);
 #elif TARGET_CPU_X86_64
 	__asm("leaq L_OBJC_CLASS_NSUUID(%%rip), %0" : "=r"(NSUUIDClassRef));
