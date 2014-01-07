@@ -1,7 +1,7 @@
 //
 //  NSUUID.m
 //
-//  Copyright (c) 2013 Cédric Luthi. All rights reserved.
+//  Copyright (c) 2013-2014 Cédric Luthi. All rights reserved.
 //
 
 #import <Availability.h>
