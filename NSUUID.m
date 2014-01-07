@@ -1,7 +1,7 @@
 //
 //  NSUUID.m
 //
-//  Copyright (c) 2013 Cédric Luthi. All rights reserved.
+//  Copyright (c) 2013-2014 Cédric Luthi. All rights reserved.
 //
 
 #import <Availability.h>
@@ -18,6 +18,7 @@
 
 #pragma clang diagnostic ignored "-Wobjc-interface-ivars"
 #pragma clang diagnostic ignored "-Wdirect-ivar-access"
+#pragma clang diagnostic ignored "-Wundef"
 
 @interface XCDUUID : NSObject <NSCopying, NSSecureCoding>
 {
@@ -178,6 +179,11 @@
 	      "movt %0, :upper16:(L_OBJC_CLASS_NSUUID-(LPC0+4))\n"
 	      "LPC0: add %0, pc" : "=r"(NSUUIDClassRef)
 	);
+#elif TARGET_CPU_ARM64
+	__asm(
+	      "adrp %0, L_OBJC_CLASS_NSUUID@PAGE\n"
+	      "add  %0, %0, L_OBJC_CLASS_NSUUID@PAGEOFF" : "=r"(NSUUIDClassRef)
+	);
 #elif TARGET_CPU_X86_64
 	__asm("leaq L_OBJC_CLASS_NSUUID(%%rip), %0" : "=r"(NSUUIDClassRef));
 #elif TARGET_CPU_X86
@@ -192,7 +198,12 @@
 #endif
 	if (NSUUIDClassRef && *NSUUIDClassRef == Nil)
 	{
-		*NSUUIDClassRef = objc_duplicateClass(self, "NSUUID", 0);
+		Class NSUUIDClass = objc_allocateClassPair(self, "NSUUID", 0);
+		if (NSUUIDClass)
+		{
+			objc_registerClassPair(NSUUIDClass);
+			*NSUUIDClassRef = NSUUIDClass;
+		}
 	}
 }
 
